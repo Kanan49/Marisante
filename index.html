@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Icons-->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/dfd7e399b7.js" crossorigin="anonymous"></script>
+    <!--Fonts-->
+    <link href="https://fonts.cdnfonts.com/css/grahm-sans-rough" rel="stylesheet">
+    <!--Site Title-->
+    <title>Marisante</title>
+
+    <style>
+        /* -------------General CSS------------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            background-color: #000000;
+            color: #FFFFFF;
+            min-height: 100vh;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        h2 {
+            font-family: 'GRAHM Sans Rough', sans-serif;
+            text-transform: uppercase;
+            font-size: 2.5rem;
+        }
+
+        /*--------------------------------------------*/
+
+
+
+        /* -------------Navigation bar------------- */
+        .dropbtn {
+            background-color: #2B2822;
+            color: #ffdf8c;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            min-width: 160px;
+        }
+
+        .dropdown {
+            position: relative;
+            float: right;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .dropdown_content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #2B2822;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown_content a {
+            color: #FFFFFF;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown_content a:hover {
+            background-color: #2B2822;
+        }
+
+        .dropdown:hover .dropdown_content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #b6902e;
+            color: #2B2822;
+        }
+
+        /*--------------------------------------------*/
+
+
+
+        /* -------------Header Parallax------------- */
+        .parallax_header {
+            /* The image used */
+            background-image: url('img/header_bg.png');
+            background-color: #af924e;
+            /* Full height */
+            height: 100vh;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+        @media only screen and (max-device-width: 1366px) {
+            .parallax_header {
+                background-attachment: scroll;
+            }
+        }
+
+
+        .parallax_header h1 {
+            font-size: 5rem;
+            color: #f68a43;
+            font-weight: 900;
+            background-color: transparent !important;
+            margin-top: 0 !important;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /*--------------------------------------------*/
+
+
+
+        /* -------------About Parallax------------- */
+        .parallax_about {
+            /* The image used */
+            background-image: url('img/about_bg.png');
+            background-color: transparent;
+            /* Full height */
+            height: 190vh;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+        @media only screen and (max-device-width: 1366px) {
+            .parallax_about {
+                background-attachment: scroll;
+            }
+        }
+
+
+        .parallax_about img {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .about_text {
+            min-width: 70%;
+            margin: 2% 10%;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            position: relative;
+            top: -100px
+        }
+
+        /*--------------------------------------------*/
+
+
+
+        /* -------------Video------------- */
+        .video {
+            position: relative;
+            top: 0;
+            cursor: pointer !important;
+            padding: 1% 5%;
+            background-image: url('img/video_bg.png');
+            /* Create the parallax scrolling effect */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 0 5%;
+            /* Should be removed. Only for demonstration */
+        }
+
+        .row {
+            background-color: transparent;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .video a {
+            color: #af924e;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        /*--------------------------------------------*/
+
+
+
+        /* -------------Quote Parallax------------- */
+        .parallax_quote {
+            /* The image used */
+            background-image: url('img/quote_bg.png');
+            background-color: #000000;
+            opacity: 0.8;
+            /* Full height */
+            height: 150vh;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+        }
+
+        /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+        @media only screen and (max-device-width: 1366px) {
+            .parallax_quote {
+                background-attachment: scroll;
+            }
+        }
+
+        .quote_text {
+            position: relative;
+            left: 0;
+            top: 30%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            text-shadow: 2px 2px #b6902e;
+        }
+
+        .quote_text h2 {
+            margin: 40px 0;
+        }
+
+        /*--------------------------------------------*/
+
+
+
+        /* -------------3rd World Parallax------------- */
+        .parallax_thirdworld {
+            /* The image used */
+            background-image: url('img/3rd_world_hiphop_bg.png');
+            background-color: #000000;
+            opacity: 0.8;
+            /* Full height */
+            height: 150vh;
+            /* Create the parallax scrolling effect */
+            background-position: bottom;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+        @media only screen and (max-device-width: 1366px) {
+            .parallax_3rdworld {
+                background-attachment: scroll;
+            }
+        }
+
+
+        .thirdworld_text {
+            position: relative;
+            left: 10%;
+            top: 55%;
+            width: 30%;
+            text-align: left;
+            color: #ffffff;
+            background-color: #4d575098;
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+            text-shadow: 2px 2px #b6902e;
+        }
+
+        .thirdworld_text span {
+            margin: 40px 0;
+            font-family: 'GRAHM Sans Rough', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .thirdworld_text h2 {
+            font-size: 2rem;
+        }
+
+        /*--------------------------------------------*/
+
+
+
+        /* -------------Merch Parallax------------- */
+        .parallax_merch {
+            /* The image used */
+            background-image: url('img/merch_bg.png');
+            background-color: transparent;
+            /* Full height */
+            height: 190vh;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: bottom center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+        @media only screen and (max-device-width: 1366px) {
+            .parallax_merch {
+                background-attachment: scroll;
+            }
+        }
+
+        .merch_undefined_logo_img {
+            position: relative;
+            top: -80px;
+            left: 0;
+            width: 100%;
+        }
+
+        .merch_text {
+            position: relative;
+            left: 0;
+            top: 20%;
+            width: 50%;
+            text-align: center;
+            color: #ffffff;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            text-shadow: 2px 2px #b6902e;
+        }
+
+        .merch_text a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        /*--------------------------------------------*/
+
+
+
+        /* -------------Social Parallax------------- */
+        .parallax_social {
+            /* The image used */
+            background-image: url('img/social_bg.png');
+            background-color: transparent;
+            /* Full height */
+            height: 120vh;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+        @media only screen and (max-device-width: 1366px) {
+            .parallax_social {
+                background-attachment: scroll;
+            }
+        }
+
+        .social_text {
+            position: absolute;
+            left: 10%;
+            padding: 10% 30px;
+            text-align: left;
+            color: #ffffff;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            text-shadow: 2px 2px #b6902e;
+        }
+
+        .social_text a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        /*--------------------------------------------*/
+    </style>
+</head>
+
+
+<body>
+    <!--Navigation Section-->
+    <div class="navigation">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="location.href='https://soundcloud.com/marisante-758568271'"
+                type="button"><i class="fa fa-volume-up" aria-hidden="true"
+                    style="font-size:18px; color: #FFFFFF; font-weight: bold;"></i>
+                Music</button>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn"><i class="fa fa-bars" style="font-size:14px; color: #FFFFFF"></i>
+                Menu</button>
+            <div class="dropdown_content">
+                <a href="#about">About</a>
+                <a href="#videos">Videos</a>
+                <a href="#merch">Merchandise</a>
+                <a href="#social">Follow me</a>
+            </div>
+        </div>
+    </div>
+    <!------------------------->
+
+
+
+    <!--Header Section-->
+    <div class="parallax_header"></div>
+    <!------------------------->
+
+
+
+    <!--About Section-->
+    <div id="about"></div>
+    <div class="parallax_about">
+        <img src="img/Who-is.png" style="width: 30%; position: relative; top: -100px; padding-left: 30px;">
+        <div class="about_text">
+            <p style="font-weight: 900; color: #ffdf8c;">Born in Tabio (Colombia) and reborn in Toronto (Canada),
+                MariSante
+                brings
+                ballad bars over brutal beats to create what she calls Third World Hip-Hop.
+                <br><br>
+            <ol>
+                <li><span style="color: #af924e;">She’s short and cute</span>, but fiesty like those small dogs that
+                    never stop yapping.</li>
+                <br>
+                <li>She yaps in Spanish, <span style="color: #af924e;">and raps in English</span>. And she’s fucking
+                    DOPE at both.</li>
+                <br>
+                <li><span style="color: #af924e;">She’s into girls</span>. <span style="color: #8eb5e0;">Gatinha
+                        Gostosa</span> ain’t a love letter; it’s a lust letter to Brazilian bitches.</li>
+                <br>
+                <li>Despite her name (Saint Mary), she’s from a world of Orisha (African Gods), and she’s not afraid to
+                    cast a rap-spell on your bitch ass. She’s done it before. You’ve been warned.</li>
+            </ol>
+            </p>
+        </div>
+        <img src="img/MariSante.png" style="width: 60%; padding-left: 150px;">
+        <img src="img/about_logo.png" id="about_cover">
+
+    </div>
+    <!------------------------->
+
+
+
+    <!--Video Section-->
+    <div id="videos"></div>
+    <div class="video">
+        <div class="row">
+            <a href="https://youtu.be/swRyGOrForg?si=vsfA8XHWXZyTHkFV">
+                <div class="column">
+                    <img src="img/video1.png" alt="Snow" style="width:90%; mix-blend-mode: none;">
+                    <p>Gatinha Gostosa</p>
+                </div>
+            </a>
+            <div class="column">
+                <a href="https://youtu.be/lNUSp1aH2yA?si=4ao_nvq6vYLwsQ_k">
+                    <img src="img/video2.png" alt="Forest" style="width:90%; mix-blend-mode: none;">
+                    <p>Celebrity Kit-Kat</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!------------------------->
+
+
+
+    <!--Quote Section-->
+    <div class="parallax_quote">
+        <div class="quote_text">
+            <img src="img/quote1.png">
+            <h2 style="color: #ffdf8c;">When hip-hop emerged it plumbed us all deep inside New York’s
+                buroughs...</h2>
+            <h2>Mari takes us to a Third World barrio full of dance, danger and inner-demons</h2>
+            <img src="img/quote2.png">
+        </div>
+    </div>
+    <!------------------------->
+
+
+
+    <!--3rd World Section-->
+    <div class="parallax_thirdworld">
+        <div class="thirdworld_text">
+            <h2>Third world Hip-Hop describes where the music is from, It’s a handwritten
+                postcard to the first world.<span style="color: #ffdf8c;"> But this isn't tourism</span> and you are not
+                a tourist.<span style="color: #ffdf8c;"> You are stuck here.</span>
+                Because Mari's Music, like all travel, is <span style="color: #ffdf8c;">consensual kidnapping.</span>
+            </h2>
+        </div>
+    </div>
+    <!------------------------->
+
+
+
+    <!--Merch Section-->
+    <div id="merch"></div>
+    <div class="parallax_merch">
+        <img src="img/merch_undefined_logo.png" class="merch_undefined_logo_img">
+        <div class="merch_text">
+            <a href="https://soundcloud.com/marisante-758568271">
+                <h2>Available now on <span><img src="img/soundcloud_logo.png" width="250"></span></h2>
+            </a>
+        </div>
+    </div>
+    <!------------------------->
+
+
+
+    <!--Follow Section-->
+    <div id="social"></div>
+    <div class="parallax_social">
+        <div class="social_text">
+            <h2 style="font-size: 3rem;">Follow Marisante on: </h2>
+            <br><br>
+            <a href="https://soundcloud.com/marisante-758568271"><i class="fa-brands fa-soundcloud"
+                    style="font-size: 3rem;"></i></a>
+            <br><br>
+            <a href="https://www.youtube.com/@HolyMariSante/videos"><i class="fa-brands fa-youtube"
+                    style="font-size: 3rem;"></i></a>
+            <br><br>
+            <a href="https://www.instagram.com/holymarisante"><i class="fa-brands fa-instagram"
+                    style="font-size: 3rem;"></i></a>
+            <br><br>
+            <a href="https://www.tiktok.com/@holymarisante?_t=8rdj4bNdyTf&_r=1"><i class="fa-brands fa-tiktok"
+                    style="font-size: 3rem;"></i></a>
+            <br><br>
+            <a href="mailto:mari@marisante.com">
+                <h2>mari@marisante.com</h2>
+            </a>
+        </div>
+    </div>
+    <!------------------------->
+
+
+
+    <!--Smooth Scroll Script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+    <!------------------------->
+</body>
+
+</html>
