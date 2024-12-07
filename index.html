@@ -110,12 +110,12 @@
             background-size: cover;
         }
 
-        /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+        /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed 
         @media only screen and (max-device-width: 1366px) {
             .parallax_header {
                 background-attachment: scroll;
             }
-        }
+        }*/
 
 
         .parallax_header h1 {
@@ -146,12 +146,12 @@
 
         }
 
-        /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+        /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed
         @media only screen and (max-device-width: 1366px) {
             .parallax_about {
                 background-attachment: scroll;
             }
-        }
+        } */
 
 
         .parallax_about img {
@@ -233,12 +233,12 @@
 
         }
 
-        /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+        /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed
         @media only screen and (max-device-width: 1366px) {
             .parallax_quote {
                 background-attachment: scroll;
             }
-        }
+        } */
 
         .quote_text {
             position: relative;
@@ -275,13 +275,13 @@
             background-size: cover;
         }
 
-        /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+        /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed
         @media only screen and (max-device-width: 1366px) {
             .parallax_3rdworld {
                 background-attachment: scroll;
             }
         }
-
+ */
 
         .thirdworld_text {
             position: relative;
@@ -375,12 +375,12 @@
 
         }
 
-        /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+        /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed
         @media only screen and (max-device-width: 1366px) {
             .parallax_social {
                 background-attachment: scroll;
             }
-        }
+        } */
 
         .social_text {
             position: absolute;
@@ -391,11 +391,120 @@
             font-size: 1.5rem;
             line-height: 2rem;
             text-shadow: 2px 2px #b6902e;
+            font-size: 3rem;
         }
 
         .social_text a {
             text-decoration: none;
             color: #ffffff;
+            font-size: 3rem;
+        }
+
+        /*--------------------------------------------*/
+
+
+
+
+        /* -------------Mobile Responsive------------- */
+
+        @media only screen and (max-width: 600px) {
+
+            p {
+                font-size: 1.1rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .parallax_header {
+                height: 70vh;
+            }
+
+            .parallax_about {
+                height: 120vh;
+            }
+
+            .about_text {
+                font-size: 1.1rem;
+                top: -10px
+            }
+
+            .whois_img {
+                width: 300px !important;
+                top: -40px !important;
+            }
+
+            .marisantename_img {
+                width: 350px !important;
+                top: -10px !important;
+                padding-left: 30px !important;
+            }
+
+            .aboutlogo_img {
+                top: -10px !important;
+            }
+
+            .video {
+                top: 50px;
+                height: 60vh;
+            }
+
+            .column {
+                width: 100%;
+                padding: 10px;
+                margin: 0;
+            }
+
+            .column p {
+                padding: 5px;
+            }
+
+            .parallax_quote {
+                height: 80vh;
+            }
+
+            .quote_text {
+                top: 10px;
+                font-size: 1.1rem;
+                padding: 30px;
+            }
+
+            .parallax_thirdworld {
+                height: 100vh;
+            }
+
+            .thirdworld_text {
+                left: 0px;
+                padding: 30px;
+                width: 100%;
+                top: 40%;
+            }
+
+            .thirdworld_text h2 {
+                font-size: 1.8rem;
+            }
+
+            .parallax_merch {
+                height: 60vh;
+                width: 100%;
+                background-position: right;
+            }
+
+            .merch_undefined_logo_img {
+                top: -20px;
+            }
+
+            .parallax_social {
+                height: 80vh;
+                background-size: cover;
+                background-position: right;
+            }
+
+
+            .social_text a {
+                font-size: 2rem;
+            }
         }
 
         /*--------------------------------------------*/
@@ -437,7 +546,8 @@
     <!--About Section-->
     <div id="about"></div>
     <div class="parallax_about">
-        <img src="img/Who-is.png" style="width: 30%; position: relative; top: -100px; padding-left: 30px;">
+        <img src="img/Who-is.png" class="whois_img"
+            style="width: 30%; position: relative; top: -100px; padding-left: 30px;">
         <div class="about_text">
             <p style="font-weight: 900; color: #ffdf8c;">Born in Tabio (Colombia) and reborn in Toronto (Canada),
                 MariSante
@@ -453,18 +563,18 @@
                 <br>
                 <li>Despite her name referring to <span style="color: #8eb5e0;">Saint Mary</span>, she’s from a world of
                     <span style="color: #8eb5e0;">Orishas (African Gods)</span>, and she’s not afraid
-                    to <span style="color: #af924e;">cast a rap-spell on your bitch ass.</span> She’s done it before.
+                    to <span style="color: #8eb5e0;">cast a rap-spell on your bitch ass.</span> She’s done it before.
                     You’ve been warned.
                 </li>
-                <li><span style="color: #af924e;">She writes lust letters to</span><span style="color: #8eb5e0;">
-                        Gatinha Gostosa</span>, fantasizes with Celebrity Kit-Kats and throws Alphabet Parties!</li>
+                <li>She writes lust letters to <span style="color: #8eb5e0;">Gatinha Gostosa</span>, fantasizes with
+                    Celebrity Kit-Kats and throws Alphabet Parties!</li>
                 <br>
             </ol>
             In other words… MariSante ain’t no saint.</p>
         </div>
 
-        <img src="img/MariSante.png" style="width: 60%; padding-left: 150px;">
-        <img src="img/about_logo.png" id="about_cover">
+        <img src="img/MariSante.png" class="marisantename_img" style="width: 60%; padding-left: 150px;">
+        <img src="img/about_logo.png" class="aboutlogo_img">
 
     </div>
     <!------------------------->
@@ -477,13 +587,13 @@
         <div class="row">
             <a href="https://youtu.be/swRyGOrForg?si=vsfA8XHWXZyTHkFV">
                 <div class="column">
-                    <img src="img/video1.png" alt="Snow" style="width:90%; mix-blend-mode: none;">
+                    <img src="img/video1.png" alt="Snow" style="width:100%; mix-blend-mode: none;">
                     <p>Gatinha Gostosa</p>
                 </div>
             </a>
             <div class="column">
                 <a href="https://youtu.be/lNUSp1aH2yA?si=4ao_nvq6vYLwsQ_k">
-                    <img src="img/video2.png" alt="Forest" style="width:90%; mix-blend-mode: none;">
+                    <img src="img/video2.png" alt="Forest" style="width:100%; mix-blend-mode: none;">
                     <p>Celebrity Kit-Kat</p>
                 </a>
             </div>
@@ -540,19 +650,15 @@
     <div id="social"></div>
     <div class="parallax_social">
         <div class="social_text">
-            <h2 style="font-size: 3rem;">Follow Marisante on: </h2>
+            <h2>Follow Marisante on: </h2>
             <br><br>
-            <a href="https://soundcloud.com/marisante-758568271"><i class="fa-brands fa-soundcloud"
-                    style="font-size: 3rem;"></i></a>
+            <a href="https://soundcloud.com/marisante-758568271"><i class="fa-brands fa-soundcloud"></i></a>
             <br><br>
-            <a href="https://www.youtube.com/@HolyMariSante/videos"><i class="fa-brands fa-youtube"
-                    style="font-size: 3rem;"></i></a>
+            <a href="https://www.youtube.com/@HolyMariSante/videos"><i class="fa-brands fa-youtube"></i></a>
             <br><br>
-            <a href="https://www.instagram.com/holymarisante"><i class="fa-brands fa-instagram"
-                    style="font-size: 3rem;"></i></a>
+            <a href="https://www.instagram.com/holymarisante"><i class="fa-brands fa-instagram"></i></a>
             <br><br>
-            <a href="https://www.tiktok.com/@holymarisante?_t=8rdj4bNdyTf&_r=1"><i class="fa-brands fa-tiktok"
-                    style="font-size: 3rem;"></i></a>
+            <a href="https://www.tiktok.com/@holymarisante?_t=8rdj4bNdyTf&_r=1"><i class="fa-brands fa-tiktok"></i></a>
             <br><br>
             <a href="mailto:mari@marisante.com">
                 <h2>mari@marisante.com</h2>
